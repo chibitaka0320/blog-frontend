@@ -1,0 +1,77 @@
+.loginContainer {
+    width: 80%;
+    margin: 0 auto;
+    background-color: var(--subground);
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+.loginHeader {
+    border-bottom: 1px solid var(--line);
+    padding: 10px;
+    font-size: 14px;
+}
+
+
+.loginContent {
+    padding: 10px;
+    font-size: 15px;
+    margin: 30px;
+}
+
+.parts {
+    margin-bottom: 30px;
+}
+
+.label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.textbox {
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px 10px;
+    margin-top: 5px;
+}
+
+.authError {
+    color: red;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.error {
+    padding-left: 10px;
+    color: red;
+    font-size: 13px;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: end;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.button {
+    font-size: 13px;
+    margin-left: 10px;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 5px 20px;
+}
+
+.button:hover {
+    background-color: var(--mainColor);
+    border: 1px solid var(--mainColor);
+    color: var(--subground);
+    font-weight: bold;
+}
+
+.signUp {
+    display: flex;
+    font-size: 13px;
+    justify-content: center;
+}

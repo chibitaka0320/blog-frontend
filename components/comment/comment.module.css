@@ -1,0 +1,33 @@
+.commentContainer {
+    border-bottom: 1px solid var(--line);
+    padding: 20px;
+}
+
+.itemHeader {
+    display: flex;
+    align-items: center;
+}
+
+.headerLeft {
+    margin-right: 15px;
+}
+
+.icon {
+    background-color: #e3e5e5;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.name {
+    font-size: 14px;
+}
+
+.date {
+    font-size: 12px;
+    color: #8e9090;
+}
+
+.itemContent {
+    padding: 15px;
+}

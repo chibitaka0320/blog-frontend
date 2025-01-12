@@ -1,0 +1,108 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.titleContainer {
+    padding: 20px;
+}
+
+.titleHeader {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    background-color: #e3e5e5;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.username {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.title {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.titleFooter {
+    display: flex;
+}
+
+.dateItem {
+    margin-right: 15px;
+}
+
+.dateTitle {
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.date {
+    font-size: 12px;
+    color: #8e9090;
+}
+
+.content {
+    margin: 30px 0;
+    background-color: var(--subground);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.content pre {
+    white-space: pre-wrap;
+}
+
+.commentContainer {
+    background-color: var(--subground);
+    border-radius: 5px;
+}
+
+.commentHeader {
+    border-bottom: 1px solid var(--line);
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.noComment {
+    border-bottom: 1px solid var(--line);
+    padding: 20px;
+}
+
+.commentForm {
+    padding: 20px;
+}
+
+.commentForm textarea {
+    border: 1px solid var(--line);
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: end;
+}
+
+.button {
+    font-size: 13px;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 5px 20px;
+    background-color: var(--mainColor);
+    color: white;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: var(--mainColorStrong);
+    border: 1px solid var(--mainColorStrong);
+}

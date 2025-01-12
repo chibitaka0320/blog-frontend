@@ -1,0 +1,49 @@
+.itemContainer {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.itemHeader {
+    display: flex;
+    align-items: center;
+}
+
+.headerLeft {
+    margin-right: 15px;
+}
+
+.icon {
+    background-color: #e3e5e5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.name {
+    font-size: 14px;
+}
+
+.date {
+    font-size: 12px;
+    color: #8e9090;
+}
+
+.itemContent {
+    padding: 15px;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.itemFooter {
+    padding-left: 15px;
+    font-size: 14px;
+}
+
+.count {
+    margin-left: 5px;
+}

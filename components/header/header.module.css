@@ -1,0 +1,68 @@
+.container {
+    background-color: var(--subground);
+    border-bottom: 1px solid var(--line);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.icon {
+    background-color: #e3e5e5;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.iconParent {
+    position: relative;
+}
+
+.iconChild {
+    width: 150px;
+    padding: 10px 0;
+    background-color: var(--subground);
+    border: 1px solid var(--line);
+    position: absolute;
+    top: 40px;
+    right: 0;
+}
+
+.iconChild li {
+    font-size: 13px;
+    padding: 5px 0;
+    display: block;
+}
+
+.headerMenu {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.headerMenu li {
+    margin-left: 15px;
+}
+
+
+.parent {
+    width: 100px;
+    height: 100px;
+    background: skyblue;
+    position: relative;
+}
+
+
+.box {
+    width: 200px;
+    height: 200px;
+    background: orange;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}

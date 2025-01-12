@@ -1,0 +1,12 @@
+.button {
+    background-color: var(--mainColor);
+    color: white;
+    font-weight: bold;
+    width: 100px;
+    padding: 5px 0;
+    border-radius: 15px;
+}
+
+.button:hover {
+    background-color: var(--mainColorStrong);
+}
