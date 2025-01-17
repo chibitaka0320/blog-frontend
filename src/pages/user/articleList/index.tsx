@@ -12,11 +12,12 @@ export default function UserArticles() {
   useEffect(() => {
     async function fetchArticles() {
       const authToken = Cookies.get("authToken");
-      const res = await fetch("http://localhost:8080/api/users/articles", {
+      const res = await fetch("http://localhost:8080/users/articles", {
         cache: "no-store",
         headers: {
           "X-AUTH-TOKEN": `Bearer ${authToken}`,
         },
+        credentials: "include",
       });
       if (!res.ok) {
         location.href = "/";

@@ -3,7 +3,7 @@ import Layout from "../../components/layout/Layout";
 import ArticleItem from "../../components/articleItem/ArticleItem";
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:8080/api/articles", {
+  const res = await fetch("http://localhost:8080/articles", {
     cache: "no-store",
   });
   const articles = await res.json();

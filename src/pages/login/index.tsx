@@ -14,7 +14,7 @@ export default function Login() {
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    fetch("http://localhost:8080/api/login", {
+    fetch("http://localhost:8080/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -29,6 +29,8 @@ export default function Login() {
           setAuthError("ユーザー名またはパスワードが違います");
           throw new Error();
         }
+        const allCookies = document.cookie;
+        console.log(allCookies);
         const authToken = response.headers.get("X-AUTH-TOKEN");
         if (!authToken) {
           setAuthError("ユーザー名またはパスワードが違います");

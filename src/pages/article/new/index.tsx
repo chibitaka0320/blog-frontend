@@ -14,7 +14,7 @@ export default function New() {
     const auth = Cookies.get("authToken");
     if (auth) {
       const decode = jwtDecode<AuthToken>(auth);
-      fetch("http://localhost:8080/api/articles", {
+      fetch("http://localhost:8080/articles", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

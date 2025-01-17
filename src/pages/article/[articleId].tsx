@@ -16,7 +16,7 @@ interface Props {
 }
 
 export async function getStaticPaths() {
-  const res = await fetch("http://localhost:8080/api/articles");
+  const res = await fetch("http://localhost:8080/articles");
   const articles = await res.json();
 
   const paths = articles.map((article: Article) => ({
@@ -27,9 +27,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: Props) {
-  const res = await fetch(
-    `http://localhost:8080/api/articles/${params.articleId}`
-  );
+  const res = await fetch(`http://localhost:8080/articles/${params.articleId}`);
   if (!res.ok) {
     return {
       notFound: true,
@@ -76,7 +74,7 @@ export default function Articles({ article }: { article: Article }) {
     const auth = Cookies.get("authToken");
     if (auth) {
       const decode = jwtDecode<AuthToken>(auth);
-      fetch(`http://localhost:8080/api/articles/${articleId}/comment`, {
+      fetch(`http://localhost:8080/articles/${articleId}/comment`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
