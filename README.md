@@ -16,14 +16,22 @@ git clone git@github.com:chibitaka0320/blog-frontend.git
 ## 起動
 node.jsがインストールされていることが前提です。
 
-### npm
+### ディレクトリの移動
+```
+cd blog-frontend/
+```
+
+### npmの場合
 ```
 npm install
 npm run dev
 ```
 
-### yarn
+### yarnの場合
 ```
 yarn install
 yarn dev
 ```
+
+　  
+**アプリケーション起動後、 http://localhost:3000/ にアクセス**
