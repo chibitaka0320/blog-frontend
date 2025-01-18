@@ -32,3 +32,6 @@ npm run dev
 yarn install
 yarn dev
 ```
+
+　  
+**アプリケーション起動後、 http://localhost:3000/ にアクセス**
