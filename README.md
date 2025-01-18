@@ -10,7 +10,7 @@
 
 ## 環境構築
 ```
-$ git clone git@github.com:chibitaka0320/blog-frontend.git
+git clone git@github.com:chibitaka0320/blog-frontend.git
 ```
 
 ## 起動
@@ -18,12 +18,12 @@ node.jsがインストールされていることが前提です。
 
 ### npm
 ```
-$ npm install
-$ npm run dev
+npm install
+npm run dev
 ```
 
 ### yarn
 ```
-$ yarn install
-$ yarn dev
+yarn install
+yarn dev
 ```
