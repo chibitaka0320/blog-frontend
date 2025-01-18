@@ -5,9 +5,8 @@
 こちらのアプリケーションを起動する前に、[バックエンド側](https://github.com/chibitaka0320/blog-backend)を起動してください。
 
 ## バージョン
-* node.js：
-* yarn：
-* next.js：
+* node.js：20.18.1
+* next.js：15.1.3
 
 ## 環境構築
 ```
