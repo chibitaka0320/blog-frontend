@@ -10,6 +10,7 @@ import Button from "../button/Button";
 export default function Header() {
   const [authToken, setAuthToken] = useState<string>();
   const [name, setName] = useState<string>();
+  const [userId, setUserId] = useState<number>();
   const [isMenu, setIsMenu] = useState<boolean>(false);
 
   useEffect(() => {
@@ -19,6 +20,7 @@ export default function Header() {
       const decode = jwtDecode<AuthToken>(auth);
       setAuthToken(auth);
       setName(decode.name);
+      setUserId(decode.id);
     }
   }, []);
 
@@ -54,7 +56,7 @@ export default function Header() {
                   {isMenu && (
                     <ul className={style.iconChild}>
                       <li>{name}</li>
-                      <Link href={`/user/articleList`}>
+                      <Link href={`/user/${userId}/articleList`}>
                         <li>マイ投稿</li>
                       </Link>
                       <li>

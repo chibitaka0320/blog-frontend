@@ -4,9 +4,11 @@ import styles from "./articleItem.module.css";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { Article } from "@/types";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function ArticleItem({ article }: { article: Article }) {
-  const { userName, title, createdAt, articleId } = article;
+  const router = useRouter();
+  const { userId, userName, title, createdAt, articleId } = article;
   const createdAtDate = new Date(createdAt);
   const createdFormat =
     createdAtDate.getFullYear() +
@@ -15,9 +17,16 @@ export default function ArticleItem({ article }: { article: Article }) {
     "月" +
     createdAtDate.getDate() +
     "日";
+
+  const handleClick = (e: React.MouseEvent) => {
+    if ((e.target as HTMLElement).closest("a") === null) {
+      router.push(`/article/${articleId}`);
+    }
+  };
+
   return (
-    <Link href={`/article/${articleId}`}>
-      <div className={styles.itemContainer}>
+    <div className={styles.itemContainer}>
+      <button onClick={handleClick} className={styles.linkButton}>
         <div className={styles.itemHeader}>
           <div className={styles.headerLeft}>
             <Image
@@ -29,7 +38,9 @@ export default function ArticleItem({ article }: { article: Article }) {
             />
           </div>
           <div className={styles.headerRight}>
-            <p className={styles.name}>{userName}</p>
+            <Link href={`user/${userId}/articleList`} className={styles.link}>
+              <p className={styles.name}>{userName}</p>
+            </Link>
             <p className={styles.date}>{createdFormat}</p>
           </div>
         </div>
@@ -40,7 +51,7 @@ export default function ArticleItem({ article }: { article: Article }) {
           <FontAwesomeIcon icon={faHeart} />
           <span className={styles.count}>30</span>
         </div>
-      </div>
-    </Link>
+      </button>
+    </div>
   );
 }

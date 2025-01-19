@@ -1,3 +1,10 @@
+interface UserArticle {
+  userId: number;
+  userName: string;
+  introduction: string;
+  articleList: Article[];
+}
+
 interface Article {
   articleId: number;
   userId: number;
@@ -24,4 +31,4 @@ interface AuthToken {
   name: string;
 }
 
-export type { Article, Comment, AuthToken };
+export type { UserArticle, Article, Comment, AuthToken };

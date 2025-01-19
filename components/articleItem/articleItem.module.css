@@ -1,3 +1,9 @@
+.linkButton {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+}
+
 .itemContainer {
     background-color: #ffffff;
     padding: 15px;
@@ -19,6 +25,11 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
+}
+
+.link:hover {
+    font-weight: 700;
+    text-decoration: underline;
 }
 
 .name {
