@@ -26,6 +26,8 @@ export default function Header() {
     Cookies.remove("authToken");
     setAuthToken("");
     setName("");
+
+    location.href = "/";
   };
 
   const onMenu = () => {
