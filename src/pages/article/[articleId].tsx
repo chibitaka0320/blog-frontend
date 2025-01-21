@@ -2,12 +2,11 @@ import Image from "next/image";
 import { Article, AuthToken, Comment } from "@/types";
 import Layout from "../../../components/layout/Layout";
 import styles from "@/styles/Article.module.css";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
 import Comments from "../../../components/comment/Comments";
 import Cookies from "js-cookie";
 import { jwtDecode } from "jwt-decode";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { marked } from "marked";
 
 interface Props {
   params: {
@@ -41,6 +40,7 @@ export async function getStaticProps({ params }: Props) {
 
 export default function Articles({ article }: { article: Article }) {
   const [comment, setComment] = useState("");
+  const [htmlContent, setHtmlContent] = useState("");
   const {
     articleId,
     userName,
@@ -67,6 +67,14 @@ export default function Articles({ article }: { article: Article }) {
     "月" +
     updatedAtDate.getDate() +
     "日";
+
+  useEffect(() => {
+    const renderHtml = async () => {
+      const html = await marked(content);
+      setHtmlContent(html);
+    };
+    renderHtml();
+  }, [content]);
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -121,12 +129,11 @@ export default function Articles({ article }: { article: Article }) {
             </div>
           </div>
         </div>
-        <div className={styles.content}>
-          <pre>{content}</pre>
+        <div
+          className={`${styles.content} markdown-body`}
+          dangerouslySetInnerHTML={{ __html: htmlContent }}
+        >
           {/* <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown> */}
-        </div>
-        <div className={styles.content}>
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
         </div>
         <div className={styles.commentContainer}>
           <div className={styles.commentHeader}>

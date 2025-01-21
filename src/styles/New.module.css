@@ -26,6 +26,13 @@
     resize: none;
 }
 
+.previewHtml {
+    height: 600px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    white-space: normal;
+}
+
 .error {
     padding-left: 10px;
     color: red;
@@ -54,4 +61,36 @@
     border: 1px solid var(--mainColor);
     color: var(--subground);
     font-weight: bold;
+}
+
+.tabs {
+    display: flex;
+}
+
+.tabs button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    text-align: center;
+}
+
+.activeTab {
+    font-weight: bold;
+    color: var(--mainColorStrong);
+    border-bottom: 1px solid var(--mainColorStrong) !important;
+}
+
+.textbox {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+
+.markdown-body {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
 }
