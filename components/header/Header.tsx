@@ -55,7 +55,9 @@ export default function Header() {
                   </button>
                   {isMenu && (
                     <ul className={style.iconChild}>
-                      <li>{name}</li>
+                      <Link href={`/user/${userId}`}>
+                        <li>{name}</li>
+                      </Link>
                       <Link href={`/user/${userId}/articleList`}>
                         <li>マイ投稿</li>
                       </Link>

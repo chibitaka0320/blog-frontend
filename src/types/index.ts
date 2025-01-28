@@ -31,4 +31,14 @@ interface AuthToken {
   name: string;
 }
 
-export type { UserArticle, Article, Comment, AuthToken };
+interface User {
+  id: number;
+  name: string;
+  email: string;
+  introduction: string;
+  imageUrl: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export type { UserArticle, Article, Comment, AuthToken, User };

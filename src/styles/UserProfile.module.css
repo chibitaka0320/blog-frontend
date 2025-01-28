@@ -1,0 +1,93 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.userContainer {
+    background-color: var(--subground);
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    width: 100%;
+}
+
+.icon {
+    background-color: var(--line);
+    border: 0.5px solid var(--foreground);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    align-items: center;
+}
+
+.right {
+    margin-left: 10px;
+    width: 80%;
+}
+
+.item {
+    margin: 10px 20px 20px;
+}
+
+.itemTitle {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.input,
+.textarea {
+    border: 1px solid var(--foreground);
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 3px;
+    width: 100%;
+
+}
+
+.fileInput {
+    font-size: 10px;
+    display: none;
+}
+
+.textarea {
+    height: 160px;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--subground);
+    background-color: var(--mainColor);
+    padding: 5px 20px;
+    border: 1px solid var(--mainColor);
+    border-radius: 20px;
+    margin-left: 10px;
+    width: 150px;
+}
+
+.btFile {
+    font-size: 10px;
+    margin-top: 10px;
+}
